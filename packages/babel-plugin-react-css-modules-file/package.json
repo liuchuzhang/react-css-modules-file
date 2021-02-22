@@ -1,0 +1,29 @@
+{
+  "name": "babel-plugin-react-css-modules-file",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "author": "liuchuzhang <liuchuzhang1@gmail.com>",
+  "repository": "https://github.com/liuchuzhang/react-css-modules-file",
+  "scripts": {
+    "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --source-maps --copy-files && npm run build-helper",
+    "build-helper": "mkdir -p ./dist/browser && NODE_ENV=production babel ./src/getClassName.js --out-file ./dist/browser/getClassName.js --source-maps --no-babelrc --plugins @babel/plugin-transform-modules-commonjs,@babel/plugin-transform-flow-strip-types --presets @babel/preset-env"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@babel/types": "^7.12.17",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "@babel/helper-plugin-test-runner": "^7.12.13",
+    "@babel/plugin-transform-flow-strip-types": "^7.12.13",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.13",
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-typescript": "^7.12.17",
+    "@babel/register": "^7.12.13",
+    "@types/node": "^14.14.31",
+    "babel-core": "^6.26.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "css-modules-file-css-loader",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "liuchuzhang <liuchuzhang1@gmail.com>",
+  "repository": "https://github.com/liuchuzhang/react-css-modules-file",
+  "dependencies": {
+    "postcss": "^8.2.6",
+    "postcss-selector-parser": "^6.0.4",
+    "qs": "^6.9.6"
+  }
+}

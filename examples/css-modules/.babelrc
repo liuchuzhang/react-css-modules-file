@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    "babel-plugin-react-css-modules-file",
+    "react-hot-loader/babel"
+  ]
+}

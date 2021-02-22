@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "react-css-modules-file",
+  "version": "0.0.1",
+  "description": "",
+  "author": "liuchuzhang <liuchuzhang1@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/liuchuzhang/react-css-modules-file",
+  "scripts": {
+    "format": "prettier --write \"packages/**/*.js\""
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1"
+  }
+}

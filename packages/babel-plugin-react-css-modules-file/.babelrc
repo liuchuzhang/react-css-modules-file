@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-flow-strip-types"
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "12.0"
+        }
+      }
+    ]
+  ]
+}
