@@ -6,10 +6,11 @@ import './app.css'
 export default () => {
   return (
     <div
-      className={classnames('a', {
-        b: true
+      className={classnames('red', {
+        blue: false
       })}>
-      Hello12
+      red
+      <div className="blue">blue</div>
       <Test></Test>
     </div>
   )

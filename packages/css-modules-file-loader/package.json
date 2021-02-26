@@ -1,5 +1,5 @@
 {
-  "name": "css-modules-file-css-loader",
+  "name": "css-modules-file-loader",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",

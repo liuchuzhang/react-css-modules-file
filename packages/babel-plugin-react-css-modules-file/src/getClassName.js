@@ -5,6 +5,6 @@ export default (classNameValue: string, suffix: string): string => {
   return classNameValue
     .split(' ')
     .filter(className => className.trim())
-    .map(className => `${className.trim()}__${suffix}`)
+    .map(className => `${className.trim()}___${suffix}`)
     .join(' ')
 }

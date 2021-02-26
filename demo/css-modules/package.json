@@ -23,7 +23,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-react-css-modules-file": "0.0.1",
     "css-loader": "^5.0.2",
-    "css-modules-file-css-loader": "0.0.1",
+    "css-modules-file-loader": "0.0.1",
     "html-webpack-plugin": "^4.5.1",
     "react-refresh": "^0.9.0",
     "sass-loader": "^11.0.1",

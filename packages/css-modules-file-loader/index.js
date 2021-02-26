@@ -12,12 +12,10 @@ const compileStyle = postcss.plugin('css-modules-file', options => root => {
         let pageSelector = null
 
         selector.each(n => {
-          // 跳过 [:]?:deep or [:]?:global, 示例:
-          // :deep .class-name { }
-          // ::global .class-name { }
+          // ">>>" and "/deep/" combinator
           if (
-            (n.type === 'pseudo' && [':deep', '::deep', ':global', '::global'].includes(n.value)) ||
-            (n.type === 'combinator' && n.value === '/deep/')
+            n.type === 'combinator' &&
+            (n.value === '>>>' || n.value === '/deep/')
           ) {
             n.value = ' '
             n.spaces.before = n.spaces.after = ''
@@ -33,19 +31,9 @@ const compileStyle = postcss.plugin('css-modules-file', options => root => {
           }
 
           if (n.type === 'class') {
-            n.value = `${n.value}__${id}`
+            n.value = `${n.value}___${id}`
           }
         })
-
-        // page 选择器后面添加 body 选择器
-        if (pageSelector) {
-          selector.insertAfter(
-            pageSelector,
-            selectorParser.tag({
-              value: ',body',
-            })
-          )
-        }
       })
     }).processSync(node.selector)
   })

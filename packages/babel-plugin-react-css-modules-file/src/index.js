@@ -110,7 +110,7 @@ export default function ({ types: t }) {
     }
 
     const relative = path.relative(process.cwd(), filePath)
-    const hash = md5(hashSeed + relative + lastHash).substr(0, 8)
+    const hash = md5(hashSeed + relative + lastHash).substr(0, 6)
     computedHash[filePath] = hash
     lastHash = hash
     return hash
@@ -144,7 +144,6 @@ export default function ({ types: t }) {
         const filename = stats.file.opts.filename
         const { hashSeed } = stats.opts
         const hash = computeHash(hashSeed, filename)
-        const suffix = `___${hash}`
 
         const attributes = path.node.openingElement.attributes.filter(
           attribute => typeof attribute.name === 'object' && attribute.name.name === 'className'
@@ -158,7 +157,7 @@ export default function ({ types: t }) {
             path.node.openingElement.attributes.push(
               t.jSXAttribute(
                 jSXIdentifier('className'),
-                t.stringLiteral(getClassName(attribute.value.value, suffix))
+                t.stringLiteral(getClassName(attribute.value.value, hash))
               )
             )
           } else if (isJSXExpressionContainer(attribute.value)) {
