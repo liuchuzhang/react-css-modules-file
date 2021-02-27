@@ -1,4 +1,4 @@
-# React CSS Module File
+# React CSS Modules File
 
 File reference to add CSS Modules.
 
